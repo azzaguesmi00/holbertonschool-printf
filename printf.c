@@ -1,5 +1,10 @@
 #include "printf.h"
 #include <stdarg.h>
+/**
+ * _printf - printf functio
+ * @format: const char *
+ * Return: int
+ */
 int _printf(const char *format, ...)
 {
 	unsigned int i;
@@ -21,17 +26,19 @@ int _printf(const char *format, ...)
 		{
 			if (format[i++] == '\0')
 				return (-1);
-			else 
+			else
 			{
-				if (get_func(format[i])!= NULL)
-					x+=(*get_func(format[i]))(p);
-				else{
-					x+= _putchar('%');
-					x+= _putchar(format[i]);}
+				if (get_func(format[i]) != NULL)
+					x += (*get_func(format[i]))(p);
+				else
+				{
+					x += _putchar('%');
+					x += _putchar(format[i]);
+				}
 			}
 		}
 		i++;
 	}
 	va_end(p);
-	return(x);
+	return (x);
 }

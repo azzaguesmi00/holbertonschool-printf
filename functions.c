@@ -25,8 +25,12 @@ int _printstring(va_list p)
 	if (str == NULL)
 		str = "(null)";
 
-	for (i = 0; str[i] != '\0'; i++)
+	i = 0;
+	while (str[i] != '\0')
+	{
 		n += _putchar(str[i]);
+		i++;
+	}
 	return (n);
 }
 /**

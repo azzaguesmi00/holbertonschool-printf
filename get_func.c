@@ -1,5 +1,5 @@
 #include <stdarg.h>
-#include "printf.h"
+#include "main.h"
 /**
  * get_func - check the code
  * @format: char

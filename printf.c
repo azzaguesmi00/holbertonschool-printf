@@ -26,15 +26,12 @@ int _printf(const char *format, ...)
 		{
 			if (format[i++] == '\0')
 				return (-1);
+			if (get_func(format[i]) != NULL)
+				x += (*get_func(format[i]))(p);
 			else
 			{
-				if (get_func(format[i]) != NULL)
-					x += (*get_func(format[i]))(p);
-				else
-				{
-					x += _putchar('%');
-					x += _putchar(format[i]);
-				}
+				x += _putchar('%');
+				x += _putchar(format[i]);
 			}
 		}
 		i++;

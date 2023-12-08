@@ -11,6 +11,11 @@ int _putchar(char c)
 {
 	return (write(1, &c, 1));
 }
+/**
+ * _printstring - print a string
+ * @p: va_list
+ * Return: int
+ */
 int _printstring(va_list p){
     char *str;
     int i,n = 0;
@@ -24,9 +29,19 @@ int _printstring(va_list p){
         n += _putchar(str[i]);
     return(n);
 }
+/**
+ * _printchar - prints a character
+ * @p: va_list
+ * Return: 1
+ */
 int _printchar(va_list p){
     return(_putchar(va_arg(p,int))); 
 }
+/**
+ * _printinteger - prints an integer
+ * @p: va_list
+ * Return: int
+ */
 int _printinteger(va_list p){
 	int size, div, va;
 	unsigned int num;
@@ -53,6 +68,11 @@ int _printinteger(va_list p){
 	}
 	return (size);
 }
+/**
+ * _printdicimal - prints a decimal number
+ * @p: va_list
+ * Return: int
+ */
 int _printdicimal(va_list p){
 	int size, div, va;
 	unsigned int num;
@@ -79,6 +99,11 @@ int _printdicimal(va_list p){
 	}
 	return (size);
 }
+/**
+ * _printpercent - prints '%'
+ * @p: va_list
+ * Return: 1
+ */
 int _printpercent( va_list p){
     int pers __attribute__((unused)) = va_arg(p,int);
     _putchar('%');

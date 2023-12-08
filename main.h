@@ -13,7 +13,7 @@ int _printinteger(va_list p);
 int _printdicimal(va_list p);
 int _printpercent(va_list p);
 
-int (*get_func(char s ))(va_list);
+int (*get_func(char s))(va_list);
 
 /**
  * struct op - Struct op

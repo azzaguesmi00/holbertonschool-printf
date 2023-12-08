@@ -1,7 +1,7 @@
-#include <stdarg.h>
+stdarg.h>
 #include "main.h"
 /**
- * get_func - check the code
+ * get_func - check the code#include <
  * @s: char
  * Return: int
  */

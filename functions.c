@@ -16,33 +16,36 @@ int _putchar(char c)
  * @p: va_list
  * Return: int
  */
-int _printstring(va_list p){
-    char *str;
-    int i,n = 0;
+int _printstring(va_list p)
+{
+	char *str;
+	int i, n = 0;
 
-    str = va_arg(p,char*);
+	str = va_arg(p, char *);
 
-    if (str == NULL)
-        str = "(null)";
+	if (str == NULL)
+		str = "(null)";
 
-    for (i=0;str[i] != '\0';i++)
-        n += _putchar(str[i]);
-    return(n);
+	for (i = 0; str[i] != '\0'; i++)
+		n += _putchar(str[i]);
+	return (n);
 }
 /**
  * _printchar - prints a character
  * @p: va_list
  * Return: 1
  */
-int _printchar(va_list p){
-    return(_putchar(va_arg(p,int))); 
+int _printchar(va_list p)
+{
+	return (_putchar(va_arg(p, int)));
 }
 /**
  * _printinteger - prints an integer
  * @p: va_list
  * Return: int
  */
-int _printinteger(va_list p){
+int _printinteger(va_list p)
+{
 	int size, div, va;
 	unsigned int num;
 
@@ -73,7 +76,8 @@ int _printinteger(va_list p){
  * @p: va_list
  * Return: int
  */
-int _printdicimal(va_list p){
+int _printdicimal(va_list p)
+{
 	int size, div, va;
 	unsigned int num;
 
@@ -104,8 +108,10 @@ int _printdicimal(va_list p){
  * @p: va_list
  * Return: 1
  */
-int _printpercent( va_list p){
-    int pers __attribute__((unused)) = va_arg(p,int);
-    _putchar('%');
-    return(1);
+int _printpercent(va_list p)
+{
+	int pers __attribute__((unused)) = va_arg(p, int);
+
+	_putchar('%');
+	return (1);
 }

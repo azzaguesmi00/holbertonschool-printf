@@ -1,4 +1,4 @@
-stdarg.h>
+#include <stdarg.h>
 #include "main.h"
 /**
  * get_func - check the code#include <
